@@ -1,6 +1,8 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MobileNav from "./MobileNav";
+import { Button } from "./ui/button";
 
 const nav = [
   {
@@ -58,12 +60,12 @@ export default function Header() {
         <div className="hidden xl:flex justify-between gap-8">
           <Nav />
           <Link href={'/contact'}>
-            <button className="text-blue-gray-900 hover:text-blue-gray-800">Hire Me</button>
+            <Button>Hire Me</Button>
           </Link>
         </div>
         {/* mobile nav & hire me */}
         <div className="xl:hidden gap-2">
-    <Nav/>
+    <MobileNav></MobileNav>
         </div>
       </div>
     </header>
