@@ -28,9 +28,9 @@ const Stats = () => {
                     {
                         stats.map((item, index) => {
                             return (
-                                <div key={index} className='flex-1 flex gap-4 items-center md:justify-center '>
+                                <div key={index} className='flex-1 flex flex-col md:flex-row gap-4 items-center justify-center '>
                                     <CountUp end={item.num} duration={5} delay={2} className="text-4xl xl:text-6cl font-extrabold" />
-                                    <p className={`${item.text.length<15? 'max-w-[100px] ':"max-w-[150px]"} leading-snug text-white/80 `}>
+                                    <p className={`md:${item.text.length<15? 'max-w-[100px] ':"max-w-[150px]"} leading-snug text-white/80 `}>
                                         {item.text}
                                     </p>
                                 </div>

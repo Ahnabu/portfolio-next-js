@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { motion } from 'framer-motion';
 import React from 'react';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, } from 'react-icons/fa';
-import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase,SiReactrouter } from 'react-icons/si';
+import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiReactrouter, SiJsonwebtokens } from 'react-icons/si';
 
 
 //about data
@@ -48,76 +48,83 @@ const education = {
     title: "Education",
     description: "I am taking bachelor's degree in Zoology from Dhaka College. I have completed my web development course from Programming Hero in 2024.",
     educationList: [
-    {
-        institution: "Programming Hero",
-        degree: "Complete Web Development",
-        duration: "2024"
-    },
-    {
-        institution: "Dhaka College",
-        degree: "BSc in Zoology",
-        duration: "2022-current"
-    },
-    {
-        institution: "Shaheed Ramiz Uddin Cantonment College",
-        degree: "Higher Secondary School Certificate",
-        duration: "2020-2021"
-    },
-    {
-        institution: "Shaheed Ramiz Uddin Cantonment School",
-        degree: "Secondary School Certificate",
-        duration: "2018-2019"
-    },
-]}
+        {
+            institution: "Programming Hero",
+            degree: "Complete Web Development",
+            duration: "2024"
+        },
+        {
+            institution: "Dhaka College",
+            degree: "BSc in Zoology",
+            duration: "2022-current"
+        },
+        {
+            institution: "Shaheed Ramiz Uddin Cantonment College",
+            degree: "Higher Secondary School Certificate",
+            duration: "2020-2021"
+        },
+        {
+            institution: "Shaheed Ramiz Uddin Cantonment School",
+            degree: "Secondary School Certificate",
+            duration: "2018-2019"
+        },
+    ]
+}
 const skills =
-    {
-        title: "My Skills",
-        description: "I am proficient in React, HTML, CSS, JavaScript, and familiar with Tailwind, Vite, Express, MongoDB, and Firebase.",
-        skillList: [
-            {
-                icon: <FaHtml5 />,
-                name: "HTML5"
-            },
-            {
-                icon: <FaCss3 />,
-                name: "CSS3"
-            },
-            {
-                icon: <FaJs />,
-                name: "JavaScript"
-            },
-            {
-                icon: <FaReact />,
-                name: "React"
-            },
-            {
-                icon: <SiReactrouter />,
-                name: "React Router"
-            },
-            {
-                icon: <SiTailwindcss />,
-                name: "Tailwind CSS"
-            },
+{
+    title: "My Skills",
+    description: "I am proficient in React, HTML, CSS, JavaScript, and familiar with Tailwind, Vite, Express, MongoDB, and Firebase.",
+    skillList: [
+        {
+            icon: <FaHtml5 />,
+            name: "HTML5"
+        },
+        {
+            icon: <FaCss3 />,
+            name: "CSS3"
+        },
+        {
+            icon: <SiTailwindcss />,
+            name: "Tailwind CSS"
+        },
+        {
+            icon: <FaJs />,
+            name: "JavaScript"
+        },
+        {
+            icon: <FaReact />,
+            name: "React"
+        },
+        {
+            icon: <SiReactrouter />,
+            name: "React Router"
+        },
 
-            {
-                icon: <FaNodeJs />,
-                name: "Node JS"
-            },
-            {
-                icon: <SiExpress />,
-                name: "Express Js"
-            },
-            {
-                icon: <SiFirebase />,
-                name: "Firebase"
-            },
-            {
-                icon: <SiMongodb />,
-                name: "Mongodb"
-            },
-            
-        ]
-    }
+
+        {
+            icon: <FaNodeJs />,
+            name: "Node JS"
+        },
+        {
+            icon: <SiExpress />,
+            name: "Express Js"
+        },
+        {
+            icon: <SiJsonwebtokens />,
+            name: "JSON Web Tokens"
+        },
+        {
+            icon: <SiFirebase />,
+            name: "Firebase"
+        },
+        {
+            icon: <SiMongodb />,
+            name: "MongoDB"
+        },
+
+
+    ]
+}
 
 
 const Resume = () => {
@@ -138,7 +145,7 @@ const Resume = () => {
                     <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
                         <TabsTrigger value="Skills">Skills</TabsTrigger>
                         <TabsTrigger value="Education">Education</TabsTrigger>
-                        
+
                         <TabsTrigger value="About">About me</TabsTrigger>
                     </TabsList>
                     {/* content */}
@@ -164,30 +171,30 @@ const Resume = () => {
                                                 >
                                                     <span className='text-accent'>{item.duration} </span>
                                                     <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left ">
-                                                {item.degree}
+                                                        {item.degree}
                                                     </h3>
                                                     <div className='flex items-center gap-3 '>
                                                         {/* dot */}
                                                         <span className="rounded-full w-[6px] h-[6px] bg-accent "></span>
-                                                       
+
                                                         <p className="text-white/80">{item.institution}</p>
                                                     </div>
                                                 </li>
                                             )
                                         })
                                     }
-                            </ul>
+                                </ul>
                             </ScrollArea>
                         </TabsContent>
                         {/* skills  */}
                         <TabsContent value="Skills" className="w-full h-full">
                             <div className='flex flex-col gap-7  '>
                                 <div className='flex flex-col gap-7 text-center xl:text-left '>
-                                     <h3 className="text-4xl font-bold">
-                                    {skills.title}
-                                </h3>
-                                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
-                                    {skills.description}
+                                    <h3 className="text-4xl font-bold">
+                                        {skills.title}
+                                    </h3>
+                                    <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
+                                        {skills.description}
                                     </p>
                                 </div>
                                 <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-7">
@@ -198,7 +205,7 @@ const Resume = () => {
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[158px] bg-[#232329] rounded-xl flex justify-center items-center hover:text-accent  ' >
                                                             <div className='text-6xl hover:text-accent transition-all duration-300'>
-                                                                {skill.icon} 
+                                                                {skill.icon}
                                                             </div>
                                                         </TooltipTrigger>
                                                         <TooltipContent>
@@ -206,13 +213,13 @@ const Resume = () => {
                                                                 {skill.name}
                                                             </p>
                                                         </TooltipContent>
-</Tooltip>
+                                                    </Tooltip>
                                                 </TooltipProvider>
-                                                </li>
+                                            </li>
                                         })
                                     }
                                 </ul>
-                            
+
                             </div>
                         </TabsContent>
                         {/* About me  */}
@@ -232,7 +239,7 @@ const Resume = () => {
                                             return (
                                                 <li key={index} className='flex items-center justify-start gap-4 mr-3'>
                                                     <span className='text-white/60 '>
-                                                    {item.fieldName}
+                                                        {item.fieldName}
                                                     </span>
                                                     <span className='text-xl'>
                                                         {item.fieldValue}
@@ -242,7 +249,7 @@ const Resume = () => {
                                         })
                                     }
                                 </ul>
-                            </div>  
+                            </div>
 
                         </TabsContent>
                     </div>
