@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 export default function Home() {
   return (
-    <section className="h-full">
+    <section className="h-full mb-6 md:mb-12 xl:mb-16">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 ">
+        <div className="flex flex-col xl:flex-row items-center justify-between ">
           {/* text  */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Web Developer</span>
