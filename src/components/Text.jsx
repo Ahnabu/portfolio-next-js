@@ -5,17 +5,26 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 const Text = () => {
     const downloadCV = () => {
-        fetch('/Syed_Md_Abu_Horaira_CV.pdf')
-            .then(response => response.blob())
-            .then(blob => {
-                const blobURL = window.URL.createObjectURL(new Blob([blob]));
-                const aTag = document.createElement('a');
-                aTag.href = blobURL;
-                aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_CV');
-                document.body.appendChild(aTag);
-                aTag.click();
-                aTag.remove();
-            });
+        // fetch('/Syed_Md_Abu_Horaira_CV.pdf')
+        //     .then(response => response.blob())
+        //     .then(blob => {
+        //         const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        //         const aTag = document.createElement('a');
+        //         aTag.href = blobURL;
+        //         aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_CV');
+        //         document.body.appendChild(aTag);
+        //         aTag.click();
+        //         aTag.remove();
+        //     });
+        
+
+            const aTag = document.createElement('a');
+            aTag.href = 'Syed_Md_Abu_Horaira_CV.pdf';
+            aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_CV');
+            document.body.appendChild(aTag);
+            aTag.click();
+            aTag.remove();
+        
     };
 
     return (
