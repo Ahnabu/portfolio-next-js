@@ -29,7 +29,7 @@ const Footer = () => {
     return (
         <div>
             {/* border */}
-            <div className="border border-white/20 ">
+            <div className="border border-white/20 mt-12 ">
 
             </div>
             <footer class="dark:bg-primary dark:text-gray-900 text-center mb-4">

@@ -27,9 +27,9 @@ const projects = [
                 data: "An intuitive dashboard provides easy navigation to essential functionalities."
             },
             {
-                data: " Secure payment methods (including Stripe) facilitate hassle-free transactions." 
+                data: " Secure payment methods (including Stripe) facilitate hassle-free transactions."
             }, {
-                data: " Efficiently manage camps, bookings, participants, and payments." 
+                data: " Efficiently manage camps, bookings, participants, and payments."
             },
             {
                 data: "Secure with token saved in local-storage "
@@ -37,7 +37,7 @@ const projects = [
             {
                 data: "A smart, unified interface simplifies camp management."
             }
-               
+
         ],
         image: '/a12.jpg',
         live: 'b9-a12-health-caduceus.web.app',
@@ -131,7 +131,8 @@ const Work = () => {
             <div className="container mx-auto">
 
                 <div className='flex flex-col xl:flex-row xl:gap-7 '>
-                    <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none '>
+                    <ScrollArea className="h-[460px] ">
+                    <div className='w-full  flex flex-col xl:justify-between order-2 xl:order-none '>
                         <div className='flex flex-col gap-7 h-[50%] '>
                             {/* outline num */}
                             <div className='group'>
@@ -148,63 +149,68 @@ const Work = () => {
                                 {project.description}
                             </p>
                             <div className="flex justify-between">
-{/* project stack */}
-                            <ul className='flex gap-4'>
-                                {project.stack.map((stack, index) => (
-                                    <li key={stack.name} className='text-accent text-xl'>
-                                        {stack.name}
-                                        {/* remove the last comma */}
-                                        {index !== project.stack.length - 1 && ','}
-                                    </li>
-                                ))}
+                                {/* project stack */}
+                                <ul className='flex gap-4'>
+                                    {project.stack.map((stack, index) => (
+                                        <li key={stack.name} className='text-accent text-xl'>
+                                            {stack.name}
+                                            {/* remove the last comma */}
+                                            {index !== project.stack.length - 1 && ','}
+                                        </li>
+                                    ))}
                                 </ul>
-                                
+
+                              
+                            </div>
+
+                            {/* border */}
+                            <div className="border border-white/20 ">
+
+                                </div>
                                 {/* button */}
-                            <div className='flex items-center gap-4 mt-2'>
-                                <Link href={project.live}>
-                                    <TooltipProvider duration={100}>
-                                        <Tooltip>
-                                            <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
-                                                <BsArrowUpRight className='text-white text-3xl group-hover:text-accent' />
-                                                <TooltipContent>
-                                                    <p>Live Project</p>
-                                                </TooltipContent>
+                                <div className='flex items-center gap-4 mt-2'>
+                                    <Link href={project.live}>
+                                        <TooltipProvider duration={100}>
+                                            <Tooltip>
+                                                <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
+                                                    <BsArrowUpRight className='text-white text-3xl group-hover:text-accent' />
+                                                    <TooltipContent>
+                                                        <p>Live Project</p>
+                                                    </TooltipContent>
 
-                                            </TooltipTrigger>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                </Link>
-                                <Link href={project.github}>
-                                    <TooltipProvider duration={500}>
-                                        <Tooltip>
-                                            <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
-                                                <BsGithub className='text-white text-3xl group-hover:text-accent' />
-                                                <TooltipContent>
-                                                    <p>Github repository</p>
-                                                </TooltipContent>
+                                                </TooltipTrigger>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                    <Link href={project.github}>
+                                        <TooltipProvider duration={500}>
+                                            <Tooltip>
+                                                <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
+                                                    <BsGithub className='text-white text-3xl group-hover:text-accent' />
+                                                    <TooltipContent>
+                                                        <p>Github repository</p>
+                                                    </TooltipContent>
 
-                                            </TooltipTrigger>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                </Link>
-                            </div>
-                            </div>
-                            
+                                                </TooltipTrigger>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                </div>
                             {/* border */}
                             <div className="border border-white/20 ">
 
                             </div>
-                            <div className="h-[200px] over ">
-                                <ul className="grid gap-7">
+                            
+                                <ul className="grid grid-cols-1 gap-7">
                                     {
                                         project.features.map((item, index) => {
-                                        
+
                                             return (
                                                 <li
                                                     key={index}
-                                                    className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 '
+                                                    className='bg-[#232329]  px-10 rounded-xl flex flex-col py-3 justify-center items-center lg:items-start gap-1 '
                                                 >
-                                                   
+
                                                     <div className='flex items-center gap-3 '>
                                                         {/* dot */}
                                                         <span className="rounded-full w-[6px] h-[6px] bg-accent "></span>
@@ -216,9 +222,10 @@ const Work = () => {
                                         })
                                     }
                                 </ul>
-                            </div>
+                            
                         </div>
-                    </div>
+                        </div>
+                    </ScrollArea>
                     <div className='w-full xl:w-[50%] '>
                         <Swiper
                             spaceBetween={30}
