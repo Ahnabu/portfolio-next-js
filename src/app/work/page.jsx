@@ -9,6 +9,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from '@/components/ui/WorkSliderBtns';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const projects = [
     {
@@ -23,18 +24,18 @@ const projects = [
         ],
         features: [
             {
-                1: "An intuitive dashboard provides easy navigation to essential functionalities."
+                data: "An intuitive dashboard provides easy navigation to essential functionalities."
             },
             {
-                2: " Secure payment methods (including Stripe) facilitate hassle-free transactions." 
+                data: " Secure payment methods (including Stripe) facilitate hassle-free transactions." 
             }, {
-                3: " Efficiently manage camps, bookings, participants, and payments." 
+                data: " Efficiently manage camps, bookings, participants, and payments." 
             },
             {
-                4: "Secure with token saved in local-storage "
+                data: "Secure with token saved in local-storage "
             },
             {
-                5: "A smart, unified interface simplifies camp management."
+                data: "A smart, unified interface simplifies camp management."
             }
                
         ],
@@ -54,19 +55,19 @@ const projects = [
         ],
         features: [
             {
-                1: "Dynamic top food section"
+                data: "Dynamic top food section"
             },
             {
-                2: "You can purchase foods"
+                data: "You can purchase foods"
             },
             {
-                3: "You can add and see reviews in gallery section"
+                data: "You can add and see reviews in gallery section"
             },
             {
-                4: "You can add your feedback"
+                data: "You can add your feedback"
             },
             {
-                5: "Secure with cookie token"
+                data: "Secure with cookie token"
             }
 
         ],
@@ -86,19 +87,19 @@ const projects = [
         ],
         features: [
             {
-                1: "You can add your art on database"
+                data: "You can add your art on database"
             },
             {
-                2: "You can update and delete your art on database"
+                data: "You can update and delete your art on database"
             },
             {
-                3: "You can see all arts added by others"
+                data: "You can see all arts added by others"
             },
             {
-                4: "Has Light and dark mode"
+                data: "Has Light and dark mode"
             },
             {
-                5: "You can add your favorite item on favorite section"
+                data: "You can add your favorite item on favorite section"
             }
 
         ],
@@ -140,13 +141,14 @@ const Work = () => {
                             </div>
 
                             {/* project category */}
-                            <h2 className="text-4xl font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">
+                            <h2 className="text-4xl font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize items-center">
                                 {project.category} project
                             </h2>
                             <p className='text-white/60'>
                                 {project.description}
                             </p>
-                            {/* project stack */}
+                            <div className="flex justify-between">
+{/* project stack */}
                             <ul className='flex gap-4'>
                                 {project.stack.map((stack, index) => (
                                     <li key={stack.name} className='text-accent text-xl'>
@@ -155,12 +157,9 @@ const Work = () => {
                                         {index !== project.stack.length - 1 && ','}
                                     </li>
                                 ))}
-                            </ul>
-                            {/* border */}
-                            <div className="border border-white/20 ">
-
-                            </div>
-                            {/* button */}
+                                </ul>
+                                
+                                {/* button */}
                             <div className='flex items-center gap-4 mt-2'>
                                 <Link href={project.live}>
                                     <TooltipProvider duration={100}>
@@ -188,6 +187,35 @@ const Work = () => {
                                         </Tooltip>
                                     </TooltipProvider>
                                 </Link>
+                            </div>
+                            </div>
+                            
+                            {/* border */}
+                            <div className="border border-white/20 ">
+
+                            </div>
+                            <div className="h-[200px] over ">
+                                <ul className="grid gap-7">
+                                    {
+                                        project.features.map((item, index) => {
+                                        
+                                            return (
+                                                <li
+                                                    key={index}
+                                                    className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 '
+                                                >
+                                                   
+                                                    <div className='flex items-center gap-3 '>
+                                                        {/* dot */}
+                                                        <span className="rounded-full w-[6px] h-[6px] bg-accent "></span>
+
+                                                        <p className="text-white/80">{item.data}</p>
+                                                    </div>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
                             </div>
                         </div>
                     </div>
