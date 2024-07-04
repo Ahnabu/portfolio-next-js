@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { motion } from 'framer-motion';
 import React from 'react';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, } from 'react-icons/fa';
-import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiReactrouter, SiJsonwebtokens } from 'react-icons/si';
+import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiReactrouter, SiJsonwebtokens,SiGit } from 'react-icons/si';
 
 
 //about data
@@ -121,6 +121,10 @@ const skills =
             icon: <SiMongodb />,
             name: "MongoDB"
         },
+        {
+            icon: <SiGit />,
+            name: "Git"
+        },
 
 
     ]
@@ -201,7 +205,7 @@ const Resume = () => {
                                     {
                                         skills.skillList.map((skill, index) => {
                                             return <li key={index} >
-                                                <TooltipProvider delayDuration={100}>
+                                                <TooltipProvider delayDuration={1000}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[158px] bg-[#232329] rounded-xl flex justify-center items-center hover:text-accent  ' >
                                                             <div className='text-6xl hover:text-accent transition-all duration-300'>

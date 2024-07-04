@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter,FaWhatsapp } from "react-icons/fa";
 const socials = [
     {
         icon: <FaGithub />,
@@ -9,6 +9,10 @@ const socials = [
     {
         icon: <FaLinkedin />,
         path:'https://www.linkedin.com/in/sm-abu-horaira'
+    },
+    {
+        icon: <FaWhatsapp />,
+        path: 'https://wa.link/064pq2'
     },
     {
         icon: <FaTwitter/>,

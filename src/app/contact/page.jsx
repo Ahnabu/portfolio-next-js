@@ -1,11 +1,7 @@
 'use client'
 import Form from '@/components/form';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react'
+import React from 'react'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 const info = [
     {
@@ -45,7 +41,7 @@ const Contact = () => {
                     <div className='xl:h-[54%] order-2 xl:order-none xl:w-1/2 
                     '>
                        
-<Form/>
+                    <Form/>
 
 
                     </div>
