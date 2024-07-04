@@ -1,5 +1,5 @@
 'use client'
-import Form from '@/components/form';
+import Form from '@/components/Form';
 import { motion } from 'framer-motion';
 import React from 'react'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
