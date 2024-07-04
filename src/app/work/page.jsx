@@ -41,7 +41,8 @@ const projects = [
         ],
         image: '/a12.jpg',
         live: 'b9-a12-health-caduceus.web.app',
-        github: "https://github.com/Ahnabu/b9-a12-health-caduceus"
+        github: "https://github.com/Ahnabu/b9-a12-health-caduceus",
+        githubServer:"https://github.com/Ahnabu/b9-a12-health-caduceus-server.git"
     },
     {
         num: "02",
@@ -73,7 +74,8 @@ const projects = [
         ],
         image: '/a11.jpg',
         live: 'a11-nurturing-energetics.web.app',
-        github: "https://github.com/Ahnabu/b9a-11-Nurturing-Energetics.git"
+        github: "https://github.com/Ahnabu/b9a-11-Nurturing-Energetics.git",
+        githubServer:"https://github.com/Ahnabu/b9a-11-Nurturing-Energetics-server.git"
     },
     {
         num: "03",
@@ -105,7 +107,8 @@ const projects = [
         ],
         image: '/a10.jpg',
         live: 'a10-art-craft.web.app/',
-        github: "https://github.com/Ahnabu/b9-a10-craft-vista.git"
+        github: "https://github.com/Ahnabu/b9-a10-craft-vista.git",
+        githubServer:"https://github.com/Ahnabu/b9-a10-craft-vista-server.git"
     },
 
 ]
@@ -188,7 +191,20 @@ const Work = () => {
                                                 <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
                                                     <BsGithub className='text-white text-3xl group-hover:text-accent' />
                                                     <TooltipContent>
-                                                        <p>Github repository</p>
+                                                        <p>Github client repository</p>
+                                                    </TooltipContent>
+
+                                                </TooltipTrigger>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                    <Link href={project.githubServer}>
+                                        <TooltipProvider duration={500}>
+                                            <Tooltip>
+                                                <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
+                                                    <BsGithub className='text-white text-3xl group-hover:text-accent' />
+                                                    <TooltipContent>
+                                                        <p>Github server repository</p>
                                                     </TooltipContent>
 
                                                 </TooltipTrigger>
