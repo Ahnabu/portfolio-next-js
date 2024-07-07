@@ -40,7 +40,7 @@ const projects = [
 
         ],
         image: '/a12.jpg',
-        live: 'b9-a12-health-caduceus.web.app',
+        live: 'https://b9-a12-health-caduceus.web.app',
         github: "https://github.com/Ahnabu/b9-a12-health-caduceus",
         githubServer:"https://github.com/Ahnabu/b9-a12-health-caduceus-server.git"
     },
@@ -73,7 +73,7 @@ const projects = [
 
         ],
         image: '/a11.jpg',
-        live: 'a11-nurturing-energetics.web.app',
+        live: 'https://a11-nurturing-energetics.web.app',
         github: "https://github.com/Ahnabu/b9a-11-Nurturing-Energetics.git",
         githubServer:"https://github.com/Ahnabu/b9a-11-Nurturing-Energetics-server.git"
     },
@@ -106,7 +106,7 @@ const projects = [
 
         ],
         image: '/a10.jpg',
-        live: 'a10-art-craft.web.app/',
+        live: 'https://a10-art-craft.web.app/',
         github: "https://github.com/Ahnabu/b9-a10-craft-vista.git",
         githubServer:"https://github.com/Ahnabu/b9-a10-craft-vista-server.git"
     },
@@ -173,7 +173,7 @@ const Work = () => {
                                 {/* button */}
                                 <div className='flex items-center gap-4 mt-2'>
                                     <Link href={project.live}>
-                                        <TooltipProvider duration={100}>
+                                        <TooltipProvider duration={1000}>
                                             <Tooltip>
                                                 <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
                                                     <BsArrowUpRight className='text-white text-3xl group-hover:text-accent' />
