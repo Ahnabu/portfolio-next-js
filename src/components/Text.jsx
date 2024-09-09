@@ -55,7 +55,7 @@ const Text = () => {
                     </Button>
                     <Button variant='outline'
                         size='lg'
-                        className="uppercase flex items-center gap-2"
+                        className="uppercase hidden xxl:flex items-center gap-2  "
                         onClick={() => { downloadCV() }}
                     >
                         <span>Download CV</span>

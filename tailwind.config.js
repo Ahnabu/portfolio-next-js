@@ -12,13 +12,14 @@ module.exports = {
     container: {
       center: true,
       padding: "1rem",
-     
+
     },
     screens: {
-       sm: '648px',
-       md: '768px',
-       lg: '968px',
-       xl: '1288px',
+      sm: '648px',
+      md: '768px',
+      lg: '968px',
+      xl: '1288px',
+      xxl: '2500px'
     },
     fontFamily: {
       primary: '--font-JetBrains'
@@ -28,7 +29,7 @@ module.exports = {
         primary: '#1c1c22',
         accent: {
           DEFAULT: '#00ff99',
-          hover:'#00e187'
+          hover: '#00e187'
         }
       },
       keyframes: {
