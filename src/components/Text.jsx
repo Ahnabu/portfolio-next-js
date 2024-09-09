@@ -26,6 +26,15 @@ const Text = () => {
             aTag.remove();
         
     };
+    const downloadResume = () => {
+   const aTag = document.createElement('a');
+            aTag.href = 'Syed_Md_Abu_Horaira_Resume.pdf';
+            aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_Resume');
+            document.body.appendChild(aTag);
+            aTag.click();
+            aTag.remove();
+        
+    };
 
     return (
         <div>
@@ -36,6 +45,14 @@ const Text = () => {
                 <p className="max-w-[500px] mb-9 text-white/80">Aspiring junior web developer with expertise in React, adept in HTML, CSS, JavaScript, and proficient in modern tools like Tailwind, Vite, Express, MongoDB, and Firebase.</p>
                 {/* btn & socials */}
                 <div className="flex flex-col xl:flex-row items-center gap-8">
+                    <Button variant='outline'
+                        size='lg'
+                        className="uppercase flex items-center gap-2"
+                        onClick={() => { downloadResume() }}
+                    >
+                        <span>Download Resume</span>
+                        <FiDownload className="text-xl" />
+                    </Button>
                     <Button variant='outline'
                         size='lg'
                         className="uppercase flex items-center gap-2"
