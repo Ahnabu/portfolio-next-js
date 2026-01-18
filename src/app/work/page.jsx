@@ -5,11 +5,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
 
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
+import { Eye } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from '@/components/ui/WorkSliderBtns';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import LivePreviewModal from '@/components/LivePreviewModal';
 
 const projects = [
     {
@@ -245,6 +247,7 @@ const projects = [
 ]
 const Work = () => {
     const [project, setProject] = useState(projects[0])
+    const [isPreviewOpen, setIsPreviewOpen] = useState(false)
     const handleSlideChange = (swiper) => {
         // get current slide index 
         const index = swiper.activeIndex;
@@ -275,9 +278,9 @@ const Work = () => {
                                 </div>
                             </div>
 
-                            {/* project category */}
-                            <h2 className="text-4xl font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize items-center">
-                                {project.category} project
+                            {/* project title */}
+                            <h2 className="text-4xl font-bold leading-none text-white hover:text-accent transition-all duration-500 items-center">
+                                {project.title}
                             </h2>
                             <p className='text-white/60'>
                                 {project.description}
@@ -303,6 +306,16 @@ const Work = () => {
                                 </div>
                                 {/* button */}
                                 <div className='flex items-center gap-4 mt-2'>
+                                    <TooltipProvider duration={1000}>
+                                        <Tooltip>
+                                            <TooltipTrigger onClick={() => setIsPreviewOpen(true)} className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group '>
+                                                <Eye className='text-white text-3xl group-hover:text-accent' />
+                                                <TooltipContent>
+                                                    <p>Interactive Preview</p>
+                                                </TooltipContent>
+                                            </TooltipTrigger>
+                                        </Tooltip>
+                                    </TooltipProvider>
                                     <Link href={project.live}>
                                         <TooltipProvider duration={1000}>
                                             <Tooltip>
@@ -435,6 +448,14 @@ const Work = () => {
                     </div>
                 </div>
             </div>
+            
+            {/* Live Preview Modal */}
+            <LivePreviewModal 
+                isOpen={isPreviewOpen}
+                onClose={() => setIsPreviewOpen(false)}
+                projectUrl={project.live}
+                projectTitle={project.title}
+            />
         </motion.section>
     );
 };
