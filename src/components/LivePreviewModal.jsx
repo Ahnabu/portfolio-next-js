@@ -31,7 +31,7 @@ const LivePreviewModal = ({ isOpen, onClose, projectUrl, projectTitle }) => {
                                 onClick={() => setDeviceView(key)}
                                 variant={deviceView === key ? "default" : "outline"}
                                 size="sm"
-                                className={`${deviceView === key ? 'bg-accent text-primary' : 'text-white/70 hover:text-white'}`}
+                                className={`${deviceView === key ? 'bg-accent text-primary px-6 py-3' : 'text-white/70 px-6 py-3  hover:text-white'}`}
                             >
                                 {label}
                             </Button>

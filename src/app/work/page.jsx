@@ -422,19 +422,14 @@ const Work = () => {
                                     return (<SwiperSlide key={index}
                                         className='w-full'
                                     >
-                                        <div className="relative group flex h-[460px] justify-center items-center bg-pink-50/20    ">
-                                            {/* overlay */}
-                                            <div className='absolute top-0 bottom-0 w-full h-full bg-black/10 z-10'>
-
-                                            </div>
-                                            {/* image */}
-                                            <div className='relative w-full h-full rounded-xl'>
-                                                <Image src={project.image}
-                                                    fill
-                                                    className='object-cover'
-                                                    alt=''
-                                                ></Image>
-                                            </div>
+                                        <div className="relative group flex h-[460px] justify-center items-center bg-pink-50/20 rounded-xl overflow-hidden">
+                                            {/* live website iframe */}
+                                            <iframe 
+                                                src={project.live}
+                                                className='w-full h-full border-0 rounded-xl'
+                                                title={`${project.title} Preview`}
+                                                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                                            />
                                         </div>
                                     </SwiperSlide>)
 

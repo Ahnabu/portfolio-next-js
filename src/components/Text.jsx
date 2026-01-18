@@ -6,9 +6,7 @@ import { FiDownload } from "react-icons/fi";
 const Text = () => {
     const downloadCV = () => {
         // Google Drive direct download link
-        // Replace YOUR_FILE_ID with your actual Google Drive file ID
-        const googleDriveFileId = process.env.NEXT_PUBLIC_CV_GOOGLE_DRIVE_ID || 'YOUR_CV_FILE_ID';
-        const downloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
+        const downloadUrl = 'https://drive.google.com/uc?export=download&id=1YRflia7CSdTZBCaUjSYLGJXEiLSdwg2X';
         
         const aTag = document.createElement('a');
         aTag.href = downloadUrl;
@@ -18,9 +16,7 @@ const Text = () => {
 
     const downloadResume = () => {
         // Google Drive direct download link
-        // Replace YOUR_FILE_ID with your actual Google Drive file ID
-        const googleDriveFileId = process.env.NEXT_PUBLIC_RESUME_GOOGLE_DRIVE_ID || 'YOUR_RESUME_FILE_ID';
-        const downloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
+        const downloadUrl = 'https://drive.google.com/uc?export=download&id=1kBYBY_Q5K5IpA5kpdvOFel4J__3jXJeo';
         
         const aTag = document.createElement('a');
         aTag.href = downloadUrl;
