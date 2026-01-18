@@ -1,43 +1,54 @@
 "use client"
-import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-import { Button } from './ui/button';
 
 const Form = () => {
     const [success, setSuccess] = useState('');
-    const [error, setError] = useState('')
-    const sendEmail =async (e) => {
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const sendEmail = async (e) => {
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value
-        const email = form.email.value
+        const name = form.name.value;
+        const email = form.email.value;
         const message = form.message.value;
-        console.log(name, email, message);
+
         if (!name || !email || !message) {
-            setError('Please fill in all the required fields.')
+            setError('Please fill in all the required fields.');
             return;
         }
-        const templateParams = {
-            from_name: email,
-            to_name: "Syed Md Abu Horaira",
-            message: message
-        }
-    
+
+        setLoading(true);
+        setError('');
+        setSuccess('');
 
         try {
-            await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_KEY, process.env.NEXT_PUBLIC_TEMPLATE_KEY, templateParams, {
-                publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                }),
             });
-            console.log('Email sent successfully!');
-            setSuccess('Your email has been successfully sent')
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to send email');
+            }
+
+            setSuccess('Your email has been successfully sent!');
             form.reset();
         } catch (err) {
             console.error('Failed to send email:', err);
-            setError(`Failed to send the email.${err.text} `)
-           
+            setError(err.message || 'Failed to send the email. Please try again.');
+        } finally {
+            setLoading(false);
         }
-            
-          
     };
 
     return (
@@ -70,8 +81,8 @@ const Form = () => {
                             
                           
                             {/* button  */}
-                <button size='md' type="submit" className="max-w-40 border rounded-2xl border-accent bg-transparent text-accent hover:bg-accent hover:text-primary py-1 hover:text-bold">
-                                Send Message
+                <button size='md' type="submit" disabled={loading} className="max-w-40 border rounded-2xl border-accent bg-transparent text-accent hover:bg-accent hover:text-primary py-1 hover:text-bold disabled:opacity-50 disabled:cursor-not-allowed">
+                                {loading ? 'Sending...' : 'Send Message'}
                             </button>
                        
             </form>

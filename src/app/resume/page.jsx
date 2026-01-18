@@ -4,8 +4,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, } from 'react-icons/fa';
-import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiReactrouter, SiJsonwebtokens,SiGit } from 'react-icons/si';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiReactrouter, SiJsonwebtokens, SiGit, SiNextdotjs, SiTypescript, SiRedux, SiSocketdotio, SiStripe, SiPostman, SiVite, SiVercel, SiGithub, SiMongoose } from 'react-icons/si';
 
 
 //about data
@@ -73,8 +73,25 @@ const education = {
 const skills =
 {
     title: "My Skills",
-    description: "I am proficient in React, HTML, CSS, JavaScript, and familiar with Tailwind, Vite, Express, MongoDB, and Firebase.",
+    description: "Full-stack developer proficient in modern web technologies including React, Next.js, TypeScript, Node.js, and MongoDB, with expertise in building scalable applications.",
     skillList: [
+        // Frontend
+        {
+            icon: <FaReact />,
+            name: "React.js"
+        },
+        {
+            icon: <SiNextdotjs />,
+            name: "Next.js"
+        },
+        {
+            icon: <SiTypescript />,
+            name: "TypeScript"
+        },
+        {
+            icon: <FaJs />,
+            name: "JavaScript"
+        },
         {
             icon: <FaHtml5 />,
             name: "HTML5"
@@ -88,45 +105,68 @@ const skills =
             name: "Tailwind CSS"
         },
         {
-            icon: <FaJs />,
-            name: "JavaScript"
-        },
-        {
-            icon: <FaReact />,
-            name: "React"
+            icon: <SiRedux />,
+            name: "Redux Toolkit"
         },
         {
             icon: <SiReactrouter />,
             name: "React Router"
         },
-
-
+        // Backend
         {
             icon: <FaNodeJs />,
-            name: "Node JS"
+            name: "Node.js"
         },
         {
             icon: <SiExpress />,
-            name: "Express Js"
-        },
-        {
-            icon: <SiJsonwebtokens />,
-            name: "JSON Web Tokens"
-        },
-        {
-            icon: <SiFirebase />,
-            name: "Firebase"
+            name: "Express.js"
         },
         {
             icon: <SiMongodb />,
             name: "MongoDB"
         },
         {
+            icon: <SiMongoose />,
+            name: "Mongoose"
+        },
+        {
+            icon: <SiJsonwebtokens />,
+            name: "JWT"
+        },
+        // Real-Time & Integrations
+        {
+            icon: <SiSocketdotio />,
+            name: "Socket.io"
+        },
+        {
+            icon: <SiFirebase />,
+            name: "Firebase"
+        },
+        {
+            icon: <SiStripe />,
+            name: "Stripe"
+        },
+        // Tools & DevOps
+        {
             icon: <SiGit />,
             name: "Git"
         },
-
-
+        {
+            icon: <SiGithub />,
+            name: "GitHub"
+        },
+        {
+            icon: <SiPostman />,
+            name: "Postman"
+        },
+        {
+            icon: <SiVite />,
+            name: "Vite"
+        },
+        {
+            icon: <SiVercel />,
+            name: "Vercel"
+        }
     ]
 }
 

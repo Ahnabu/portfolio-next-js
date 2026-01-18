@@ -15,100 +15,231 @@ const projects = [
     {
         num: "01",
         category: "fullstack",
-        title: "project 1",
-        description: 'This web application simplifies health camp management, allowing organizers and users to efficiently handle bookings, payments, and participant tracking.',
+        title: "Evo-Tech — Advanced E-Commerce Platform",
+        description: 'A scalable, production-grade e-commerce platform designed for tech products. The system supports multi-role access, real-time updates, advanced product management, and modern SEO-friendly architecture.',
         stack: [
             {
-                name: "MERN"
+                name: "Next.js"
+            },
+            {
+                name: "React"
+            },
+            {
+                name: "TypeScript"
+            },
+            {
+                name: "Node.js"
+            },
+            {
+                name: "Express.js"
+            },
+            {
+                name: "MongoDB"
             },
         ],
         features: [
             {
-                data: "An intuitive dashboard provides easy navigation to essential functionalities."
+                data: "Multi-role authentication system (User, Admin, Employee)"
             },
             {
-                data: " Secure payment methods (including Stripe) facilitate hassle-free transactions."
-            }, {
-                data: " Efficiently manage camps, bookings, participants, and payments."
+                data: "JWT-based auth with OAuth social login support"
             },
             {
-                data: "Secure with token saved in local-storage "
+                data: "Advanced product catalog with categories, brands, variants, and stock tracking"
             },
             {
-                data: "A smart, unified interface simplifies camp management."
+                data: "Persistent cart, wishlist, order lifecycle, and invoice management"
+            },
+            {
+                data: "Real-time notifications and updates using Socket.io"
+            },
+            {
+                data: "Admin dashboard for inventory, users, orders, and content control"
             }
-
         ],
-        image: '/a12.jpg',
-        live: 'https://b9-a12-health-caduceus.web.app',
-        github: "https://github.com/Ahnabu/b9-a12-health-caduceus",
-        githubServer:"https://github.com/Ahnabu/b9-a12-health-caduceus-server.git"
+        technicalHighlights: [
+            {
+                data: "Next.js App Router for performance and SEO"
+            },
+            {
+                data: "TypeScript across frontend and backend for type safety"
+            },
+            {
+                data: "Redux Toolkit & RTK Query for state and API management"
+            },
+            {
+                data: "MongoDB schema design optimized for large catalogs"
+            },
+            {
+                data: "Socket.io for real-time communication"
+            }
+        ],
+        image: '/evo-tech.jpg',
+        live: 'https://evo-tech-frontend.vercel.app',
+        github: "https://github.com/Ahnabu/evo-tech/tree/main/frontend",
+        githubServer: "https://github.com/Ahnabu/evo-tech/tree/main/backend"
     },
     {
         num: "02",
         category: "fullstack",
-        title: "project 2",
-        description: 'It is a restaurant management website, the idea is, one can sell & buy food on this website.',
+        title: "SMS — School Management System",
+        description: 'A comprehensive school management system with role-based dashboards for administrators, teachers, parents, students, and accountants. It models real academic and financial workflows.',
         stack: [
             {
-                name: "MERN"
+                name: "MongoDB"
+            },
+            {
+                name: "Express.js"
+            },
+            {
+                name: "React"
+            },
+            {
+                name: "Node.js"
+            },
+            {
+                name: "TypeScript"
             },
         ],
         features: [
             {
-                data: "Dynamic top food section"
+                data: "Role-based dashboards for administrators, teachers, parents, students, and accountants"
             },
             {
-                data: "You can purchase foods"
+                data: "Secure authentication and access control (RBAC)"
             },
             {
-                data: "You can add and see reviews in gallery section"
+                data: "Attendance management with instant visibility"
             },
             {
-                data: "You can add your feedback"
+                data: "Homework assignment, submission, and tracking"
             },
             {
-                data: "Secure with cookie token"
+                data: "Academic calendar and notice management"
+            },
+            {
+                data: "Fee structure creation with automatic syncing across student records"
             }
-
         ],
-        image: '/a11.jpg',
-        live: 'https://a11-nurturing-energetics.web.app',
-        github: "https://github.com/Ahnabu/b9a-11-Nurturing-Energetics.git",
-        githubServer:"https://github.com/Ahnabu/b9a-11-Nurturing-Energetics-server.git"
+        technicalHighlights: [
+            {
+                data: "MERN architecture with TypeScript"
+            },
+            {
+                data: "JWT authentication and Zod validation"
+            },
+            {
+                data: "Scalable backend folder structure"
+            },
+            {
+                data: "Complex data modeling for fees, roles, and academic entities"
+            }
+        ],
+        image: '/sms.jpg',
+        live: 'https://sms-frontend-chi.vercel.app/',
+        github: "https://github.com/Ahnabu/SMS/tree/main/frontend",
+        githubServer: ""
     },
     {
         num: "03",
         category: "fullstack",
-        title: "project 3",
-        description: 'This web application is for shearing art and craft.The idea is one can add the art he or she wants, love others work and save it on a section, update his added art and crafts.',
+        title: "Safa Residency — Hotel Management System",
+        description: 'A production-ready hotel management system enabling room booking, reservation management, and secure online payments with multilingual support.',
         stack: [
             {
-                name: "MERN"
+                name: "MongoDB"
+            },
+            {
+                name: "Express.js"
+            },
+            {
+                name: "React"
+            },
+            {
+                name: "Node.js"
             },
         ],
         features: [
             {
-                data: "You can add your art on database"
+                data: "Room discovery, booking, and availability management"
             },
             {
-                data: "You can update and delete your art on database"
+                data: "Secure online payments using SSLCommerz"
             },
             {
-                data: "You can see all arts added by others"
+                data: "Multi-role dashboards (Guest, Staff, Admin)"
             },
             {
-                data: "Has Light and dark mode"
+                data: "Booking history, service requests, and admin controls"
             },
             {
-                data: "You can add your favorite item on favorite section"
+                data: "English and Bangla language support (i18n)"
             }
-
         ],
-        image: '/a10.jpg',
-        live: 'https://a10-art-craft.web.app/',
-        github: "https://github.com/Ahnabu/b9-a10-craft-vista.git",
-        githubServer:"https://github.com/Ahnabu/b9-a10-craft-vista-server.git"
+        technicalHighlights: [
+            {
+                data: "Firebase authentication"
+            },
+            {
+                data: "Payment gateway integration (SSLCommerz)"
+            },
+            {
+                data: "Internationalization (i18n)"
+            },
+            {
+                data: "Deployed and used in a real-world scenario"
+            }
+        ],
+        image: '/safa-residency.jpg',
+        live: 'https://safa-residency-bd4f2.web.app/',
+        github: "https://github.com/Ahnabu/safa-residency/tree/main/client",
+        githubServer: "https://github.com/Ahnabu/safa-residency/tree/main/server"
+    },
+    {
+        num: "04",
+        category: "frontend",
+        title: "Lift — Corporate Website",
+        description: 'A responsive corporate website built for a lift and elevator company to showcase products, services, completed projects, and capture business leads.',
+        stack: [
+            {
+                name: "Next.js"
+            },
+            {
+                name: "TypeScript"
+            },
+            {
+                name: "Tailwind CSS"
+            },
+        ],
+        features: [
+            {
+                data: "SEO-friendly landing pages"
+            },
+            {
+                data: "Product and service showcase sections"
+            },
+            {
+                data: "Project gallery for credibility"
+            },
+            {
+                data: "Lead-generation contact forms"
+            }
+        ],
+        technicalHighlights: [
+            {
+                data: "Next.js for server-side rendering and SEO"
+            },
+            {
+                data: "Tailwind CSS for responsive UI"
+            },
+            {
+                data: "Clean, professional design focused on business needs"
+            }
+        ],
+        image: '/lift.jpg',
+        live: 'https://lift-blush.vercel.app/',
+        github: "https://github.com/Ahnabu/lift",
+        githubServer: "https://github.com/Ahnabu/lift"
     },
 
 ]
@@ -217,27 +348,51 @@ const Work = () => {
 
                             </div>
                             
-                                <ul className="grid grid-cols-1 gap-7">
-                                    {
-                                        project.features.map((item, index) => {
+                                {/* Core Features Section */}
+                                <div>
+                                    <h3 className="text-2xl font-semibold text-white mb-4">Core Features</h3>
+                                    <ul className="grid grid-cols-1 gap-4">
+                                        {
+                                            project.features.map((item, index) => {
+                                                return (
+                                                    <li
+                                                        key={index}
+                                                        className='bg-[#232329] px-10 rounded-xl flex flex-col py-3 justify-center items-center lg:items-start gap-1'
+                                                    >
+                                                        <div className='flex items-center gap-3'>
+                                                            {/* dot */}
+                                                            <span className="rounded-full w-[6px] h-[6px] bg-accent"></span>
+                                                            <p className="text-white/80">{item.data}</p>
+                                                        </div>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
 
-                                            return (
-                                                <li
-                                                    key={index}
-                                                    className='bg-[#232329]  px-10 rounded-xl flex flex-col py-3 justify-center items-center lg:items-start gap-1 '
-                                                >
-
-                                                    <div className='flex items-center gap-3 '>
-                                                        {/* dot */}
-                                                        <span className="rounded-full w-[6px] h-[6px] bg-accent "></span>
-
-                                                        <p className="text-white/80">{item.data}</p>
-                                                    </div>
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
+                                {/* Technical Highlights Section */}
+                                <div>
+                                    <h3 className="text-2xl font-semibold text-white mb-4">Technical Highlights</h3>
+                                    <ul className="grid grid-cols-1 gap-4">
+                                        {
+                                            project.technicalHighlights.map((item, index) => {
+                                                return (
+                                                    <li
+                                                        key={index}
+                                                        className='bg-[#232329] px-10 rounded-xl flex flex-col py-3 justify-center items-center lg:items-start gap-1'
+                                                    >
+                                                        <div className='flex items-center gap-3'>
+                                                            {/* dot */}
+                                                            <span className="rounded-full w-[6px] h-[6px] bg-accent"></span>
+                                                            <p className="text-white/80">{item.data}</p>
+                                                        </div>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
                             
                         </div>
                         </div>
