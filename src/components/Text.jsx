@@ -5,35 +5,27 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 const Text = () => {
     const downloadCV = () => {
-        // fetch('/Syed_Md_Abu_Horaira_CV.pdf')
-        //     .then(response => response.blob())
-        //     .then(blob => {
-        //         const blobURL = window.URL.createObjectURL(new Blob([blob]));
-        //         const aTag = document.createElement('a');
-        //         aTag.href = blobURL;
-        //         aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_CV');
-        //         document.body.appendChild(aTag);
-        //         aTag.click();
-        //         aTag.remove();
-        //     });
+        // Google Drive direct download link
+        // Replace YOUR_FILE_ID with your actual Google Drive file ID
+        const googleDriveFileId = process.env.NEXT_PUBLIC_CV_GOOGLE_DRIVE_ID || 'YOUR_CV_FILE_ID';
+        const downloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
         
-
-            const aTag = document.createElement('a');
-            aTag.href = 'Syed_Md_Abu_Horaira_CV.pdf';
-            aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_CV');
-            document.body.appendChild(aTag);
-            aTag.click();
-            aTag.remove();
-        
+        const aTag = document.createElement('a');
+        aTag.href = downloadUrl;
+        aTag.setAttribute('target', '_blank');
+        aTag.click();
     };
+
     const downloadResume = () => {
-   const aTag = document.createElement('a');
-            aTag.href = 'Syed_Md_Abu_Horaira_Resume.pdf';
-            aTag.setAttribute('download', 'Syed_Md_Abu_Horaira_Resume');
-            document.body.appendChild(aTag);
-            aTag.click();
-            aTag.remove();
+        // Google Drive direct download link
+        // Replace YOUR_FILE_ID with your actual Google Drive file ID
+        const googleDriveFileId = process.env.NEXT_PUBLIC_RESUME_GOOGLE_DRIVE_ID || 'YOUR_RESUME_FILE_ID';
+        const downloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
         
+        const aTag = document.createElement('a');
+        aTag.href = downloadUrl;
+        aTag.setAttribute('target', '_blank');
+        aTag.click();
     };
 
     return (
