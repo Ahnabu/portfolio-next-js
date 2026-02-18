@@ -199,6 +199,64 @@ const projects = [
     },
     {
         num: "04",
+        category: "fullstack",
+        title: "Inkraft — Premium Editorial Blogging Platform",
+        description: 'A production-ready blogging platform designed for content creators, featuring professional analytics, SEO optimization, and a distraction-free reading experience.',
+        stack: [
+            {
+                name: "Next.js"
+            },
+            {
+                name: "MongoDB"
+            },
+            {
+                name: "React"
+            },
+            {
+                name: "Node.js"
+            },
+            {
+                name: "TypeScript"
+            }
+        ],
+        features: [
+            {
+                data: "Rich Text Editor with Markdown support and syntax highlighting"
+            },
+            {
+                data: "Professional-grade Analytics with geographic tracking"
+            },
+            {
+                data: "SEO Optimization with automated Schema.org and sitemaps"
+            },
+            {
+                data: "Multi-role dashboards (Reader, Author, Admin)"
+            },
+            {
+                data: "Internationalization (i18n) support (English & Bangla)"
+            }
+        ],
+        technicalHighlights: [
+            {
+                data: "Next.js App Router Architecture"
+            },
+            {
+                data: "Vercel BotID for security"
+            },
+            {
+                data: "Incremental Static Regeneration (ISR)"
+            },
+            {
+                data: "Cloudinary Image Optimization"
+            }
+        ],
+        image: '/inkraft.png',
+        live: 'https://inkraftblog.vercel.app/',
+        github: "https://github.com/Ahnabu/inkraft",
+        githubServer: "https://github.com/Ahnabu/inkraft"
+    },
+    {
+        num: "05",
         category: "frontend",
         title: "Lift — Corporate Website",
         description: 'A responsive corporate website built for a lift and elevator company to showcase products, services, completed projects, and capture business leads.',
