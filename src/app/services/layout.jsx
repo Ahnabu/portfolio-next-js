@@ -20,7 +20,7 @@ export const metadata = {
         description: 'Professional web development services: full-stack, frontend, and backend development using modern technologies like React, Next.js, and Node.js.',
         type: 'website',
         locale: 'en_US',
-        url: 'https://yourportfolio.com/services',
+        url: 'https://portfolio-abu-horaira.vercel.app/services',
         siteName: 'Syed Md Abu Horaira Portfolio',
     },
     twitter: {
@@ -29,7 +29,7 @@ export const metadata = {
         description: 'Professional web development services using React, Next.js, Node.js, and modern web technologies.',
     },
     alternates: {
-        canonical: 'https://yourportfolio.com/services',
+        canonical: 'https://portfolio-abu-horaira.vercel.app/services',
     },
     robots: {
         index: true,

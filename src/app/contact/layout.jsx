@@ -16,7 +16,7 @@ export const metadata = {
         description: 'Get in touch for web development projects and collaborations. Full-stack developer based in Dhaka, Bangladesh.',
         type: 'website',
         locale: 'en_US',
-        url: 'https://yourportfolio.com/contact',
+        url: 'https://portfolio-abu-horaira.vercel.app/contact',
         siteName: 'Syed Md Abu Horaira Portfolio',
     },
     twitter: {
@@ -25,7 +25,7 @@ export const metadata = {
         description: 'Get in touch for web development projects. Full-stack developer specializing in React and Node.js.',
     },
     alternates: {
-        canonical: 'https://yourportfolio.com/contact',
+        canonical: 'https://portfolio-abu-horaira.vercel.app/contact',
     },
     robots: {
         index: true,

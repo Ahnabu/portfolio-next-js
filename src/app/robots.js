@@ -7,6 +7,6 @@ export default function robots() {
                 disallow: ['/api/'],
             },
         ],
-        sitemap: 'https://yourportfolio.com/sitemap.xml', // Replace with your actual domain
+        sitemap: 'https://portfolio-abu-horaira.vercel.app/sitemap.xml',
     };
 }

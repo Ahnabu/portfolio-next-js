@@ -14,7 +14,7 @@ const JetBrains = JetBrains_Mono({
 variable:'--font-JetBrains'});
 
 export const metadata = {
-  metadataBase: new URL('https://yourportfolio.com'), // Replace with your actual domain
+  metadataBase: new URL('https://portfolio-abu-horaira.vercel.app'),
   title: {
     default: 'Syed Md Abu Horaira | Full Stack Web Developer',
     template: '%s | Syed Md Abu Horaira',
@@ -51,7 +51,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourportfolio.com',
+    url: 'https://portfolio-abu-horaira.vercel.app',
     siteName: 'Syed Md Abu Horaira Portfolio',
     title: 'Syed Md Abu Horaira | Full Stack Web Developer',
     description: 'Full-stack web developer specializing in React, Next.js, TypeScript, Node.js, and MongoDB. View my portfolio of production-ready web applications.',
@@ -68,7 +68,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Syed Md Abu Horaira | Full Stack Web Developer',
     description: 'Full-stack developer specializing in React, Next.js, and Node.js. Building scalable web applications.',
-    creator: '@yourtwitterhandle', // Replace with your Twitter handle
+    // creator: '@yourtwitterhandle', // Add your Twitter handle if you have one
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -98,10 +98,10 @@ export default function RootLayout({ children }) {
     name: 'Syed Md Abu Horaira',
     jobTitle: 'Full Stack Web Developer',
     description: 'Full-stack web developer specializing in React, Next.js, TypeScript, Node.js, and MongoDB',
-    url: 'https://yourportfolio.com',
+    url: 'https://portfolio-abu-horaira.vercel.app',
     sameAs: [
-      'https://github.com/Ahnabu', // Replace with your actual GitHub
-      'https://linkedin.com/in/yourprofile', // Replace with your LinkedIn
+      'https://github.com/Ahnabu',
+      'https://www.linkedin.com/in/sm-abu-horaira/',
       // Add other social profiles
     ],
     knowsAbout: [

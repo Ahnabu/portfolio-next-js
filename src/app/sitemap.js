@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://yourportfolio.com'; // Replace with your actual domain
+    const baseUrl = 'https://portfolio-abu-horaira.vercel.app';
     
     const routes = ['', '/work', '/resume', '/services', '/contact'].map((route) => ({
         url: `${baseUrl}${route}`,

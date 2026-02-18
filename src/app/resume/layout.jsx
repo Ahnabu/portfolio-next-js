@@ -22,7 +22,7 @@ export const metadata = {
         description: 'Experienced full-stack web developer skilled in React, Next.js, TypeScript, Node.js, and modern web technologies. Check out my technical skills and experience.',
         type: 'profile',
         locale: 'en_US',
-        url: 'https://yourportfolio.com/resume',
+        url: 'https://portfolio-abu-horaira.vercel.app/resume',
         siteName: 'Syed Md Abu Horaira Portfolio',
     },
     twitter: {
@@ -31,7 +31,7 @@ export const metadata = {
         description: 'Full-stack web developer skilled in React, Next.js, TypeScript, Node.js, and MongoDB.',
     },
     alternates: {
-        canonical: 'https://yourportfolio.com/resume',
+        canonical: 'https://portfolio-abu-horaira.vercel.app/resume',
     },
     robots: {
         index: true,

@@ -21,7 +21,7 @@ export const metadata = {
         description: 'Full-stack web development projects showcasing expertise in React, Next.js, Node.js, TypeScript, and MongoDB. View live demos and source code.',
         type: 'website',
         locale: 'en_US',
-        url: 'https://yourportfolio.com/work',
+        url: 'https://portfolio-abu-horaira.vercel.app/work',
         siteName: 'Syed Md Abu Horaira Portfolio',
         images: [
             {
@@ -39,7 +39,7 @@ export const metadata = {
         images: ['/evo-tech.jpg'],
     },
     alternates: {
-        canonical: 'https://yourportfolio.com/work',
+        canonical: 'https://portfolio-abu-horaira.vercel.app/work',
     },
     robots: {
         index: true,
