@@ -2,10 +2,6 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
-import Footer from "@/components/Footer";
 
 
 const JetBrains = JetBrains_Mono({
@@ -140,15 +136,9 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         
-        <Header></Header>
-       
-        <StairTransition></StairTransition>
-        <PageTransition>
-          {children}
-          <Analytics />
-          <SpeedInsights/>
-        </PageTransition>
-       {/* <Footer/> */}
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
