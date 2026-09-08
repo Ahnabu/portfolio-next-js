@@ -34,9 +34,9 @@ export default function HeroSection3D() {
   };
 
   return (
-    <section id="home" className="min-h-screen pt-28 pb-16 flex items-center justify-center relative">
+    <section id="home" className="min-h-screen pt-32 pb-20 flex items-center justify-center relative">
       <div className="container mx-auto max-w-screen-xl px-4">
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-8">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-14 xl:gap-8">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -44,19 +44,22 @@ export default function HeroSection3D() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center xl:text-left order-2 xl:order-none max-w-xl"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-mono mb-4">
+            {/* Cyber Status Badge */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/40 text-accent text-xs font-mono uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(0,255,153,0.2)]">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span>{personalInfo.role}</span>
+              <span className="text-white/30">{"//"}</span>
+              <span className="text-white/70">MERN & NEXT.JS</span>
             </div>
 
-            <h1 className="h1 mb-6 text-white">
+            <h1 className="h1 mb-6 text-white tracking-tight">
               Hello I&apos;m <br />
-              <span className="text-accent drop-shadow-[0_0_25px_rgba(0,255,153,0.3)]">
+              <span className="text-accent text-glow">
                 {personalInfo.name}
               </span>
             </h1>
 
-            <p className="max-w-[500px] mb-9 text-white/80 text-base sm:text-lg leading-relaxed">
+            <p className="max-w-[520px] mb-9 text-white/80 text-base sm:text-lg leading-relaxed font-normal">
               {personalInfo.bio}
             </p>
 
@@ -66,7 +69,7 @@ export default function HeroSection3D() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="uppercase flex items-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300 shadow-[0_0_15px_rgba(0,255,153,0.2)]"
+                  className="uppercase flex items-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300 shadow-[0_0_20px_rgba(0,255,153,0.25)] font-bold px-6"
                   onClick={downloadResume}
                 >
                   <span>Resume</span>
@@ -75,7 +78,7 @@ export default function HeroSection3D() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="uppercase flex items-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300 shadow-[0_0_15px_rgba(0,255,153,0.2)]"
+                  className="uppercase flex items-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300 shadow-[0_0_20px_rgba(0,255,153,0.25)] font-bold px-6"
                   onClick={downloadCV}
                 >
                   <span>CV</span>
@@ -84,7 +87,7 @@ export default function HeroSection3D() {
               </div>
 
               {/* Social icons */}
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 {socials
                   .filter((item) => item.name !== 'Dev.to')
                   .map((item, index) => (
@@ -93,7 +96,7 @@ export default function HeroSection3D() {
                       href={item.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-11 h-11 border border-accent/40 rounded-full flex justify-center items-center text-accent text-lg hover:bg-accent hover:text-primary hover:border-accent hover:shadow-[0_0_15px_rgba(0,255,153,0.6)] transition-all duration-300 backdrop-blur-sm bg-white/5"
+                      className="w-11 h-11 border border-white/10 rounded-full flex justify-center items-center text-accent text-lg hover:bg-accent hover:text-primary hover:border-accent hover:shadow-[0_0_18px_rgba(0,255,153,0.5)] transition-all duration-300 backdrop-blur-md bg-white/5"
                     >
                       {getSocialIcon(item.icon)}
                     </Link>

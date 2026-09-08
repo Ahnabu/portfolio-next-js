@@ -11,7 +11,7 @@ import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiReactrouter, SiJsonw
 //about data
 const about = {
     title: "About me",
-    description: "Aspiring junior web developer skilled in React, HTML, CSS, JavaScript, and modern tools like Tailwind, Vite, Express, MongoDB, and Firebase, with some knowledge of Next.js.",
+    description: "Aspiring junior web developer skilled in React, HTML, CSS, JavaScript, and modern tools like Tailwind, Vite, Express, MongoDB, and Firebase, with Next.js.",
     info: [
         {
             fieldName: "Name",

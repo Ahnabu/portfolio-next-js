@@ -21,13 +21,14 @@ export default function ServicesSection3D() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-accent text-sm font-mono uppercase tracking-widest">
-            Expertise & Capabilities
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold mt-2 text-white">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-mono uppercase tracking-widest mb-3">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span>SPECIALIZED DOMAINS</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
             Services & Solutions
           </h2>
-          <p className="text-white/60 max-w-xl mx-auto mt-4 text-base">
+          <p className="text-white/60 max-w-xl mx-auto mt-4 text-base leading-relaxed">
             High-performance web applications built from front to back with modern engineering standards.
           </p>
         </motion.div>
@@ -41,16 +42,16 @@ export default function ServicesSection3D() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative p-8 rounded-2xl bg-gradient-to-b from-[#232329]/90 to-[#1c1c22]/95 border border-white/10 hover:border-accent/60 backdrop-blur-md transition-all duration-300 shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_40px_rgba(0,255,153,0.15)] flex flex-col justify-between h-full"
+              className="cyber-card rounded-2xl p-8 sm:p-9 flex flex-col justify-between h-full group"
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-5xl font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-500 font-mono">
+                  <span className="text-6xl font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-500 font-mono tracking-tight">
                     {item.num}
                   </span>
                   <button
                     onClick={scrollToWork}
-                    className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-accent group-hover:text-primary group-hover:rotate-45 transition-all duration-300 shadow-md"
+                    className="w-12 h-12 rounded-full bg-[#14141a] border border-white/10 flex items-center justify-center text-white group-hover:bg-accent group-hover:text-primary group-hover:rotate-45 group-hover:shadow-[0_0_20px_rgba(0,255,153,0.5)] transition-all duration-300"
                     aria-label={`View ${item.title}`}
                   >
                     <BsArrowDownRight className="text-xl -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
@@ -64,11 +65,6 @@ export default function ServicesSection3D() {
                 <p className="text-white/70 text-sm leading-relaxed">
                   {item.description}
                 </p>
-              </div>
-
-              <div className="pt-8 mt-6 border-t border-white/10 flex items-center gap-2 text-accent text-sm font-mono">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                <span>Production Ready</span>
               </div>
             </motion.div>
           ))}

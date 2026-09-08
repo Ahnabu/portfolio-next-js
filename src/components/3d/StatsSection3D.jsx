@@ -18,17 +18,22 @@ export default function StatsSection3D() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="relative group p-6 rounded-2xl bg-gradient-to-b from-[#232329]/80 to-[#1c1c22]/90 border border-white/10 hover:border-accent/50 backdrop-blur-md transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_10px_35px_rgba(0,255,153,0.15)] flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left"
+              className="cyber-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between h-[160px] group cursor-default"
             >
-              {/* Glowing decorative corner accent */}
-              <div className="absolute top-0 right-0 w-8 h-8 rounded-tr-2xl bg-accent/5 group-hover:bg-accent/20 transition-all pointer-events-none" />
-
-              <div className="text-4xl sm:text-5xl font-extrabold text-accent font-mono">
-                <CountUp end={item.num} duration={4} delay={0.5} enableScrollSpy scrollSpyOnce />
-                {item.num === 1600 || item.num === 1100 ? '+' : ''}
+              <div className="flex justify-end">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               </div>
 
-              <p className="text-white/80 text-sm sm:text-base leading-snug max-w-[140px]">
+              <div className="flex items-baseline gap-1">
+                <span className="text-4xl sm:text-5xl font-black text-white group-hover:text-accent group-hover:text-glow transition-all duration-300 font-mono tracking-tight">
+                  <CountUp end={item.num} duration={3.5} delay={0.2} enableScrollSpy scrollSpyOnce />
+                </span>
+                <span className="text-2xl font-bold text-accent font-mono">
+                  {item.num === 1600 || item.num === 1100 ? '+' : ''}
+                </span>
+              </div>
+
+              <p className="text-white/70 text-sm leading-snug font-medium line-clamp-2">
                 {item.text}
               </p>
             </motion.div>

@@ -4,7 +4,7 @@ export const personalInfo = {
   role: "Full Stack Web Developer",
   subRole: "Web Developer",
   bio: "Aspiring junior web developer with expertise in React, adept in HTML, CSS, JavaScript, and proficient in modern tools like Tailwind, Vite, Express, MongoDB, and Firebase.",
-  aboutDescription: "Aspiring junior web developer skilled in React, HTML, CSS, JavaScript, and modern tools like Tailwind, Vite, Express, MongoDB, and Firebase, with some knowledge of Next.js.",
+  aboutDescription: "Aspiring junior web developer skilled in React, HTML, CSS, JavaScript, and modern tools like Tailwind, Vite, Express, MongoDB, and Firebase, with Next.js.",
   phone: "+880 1302 537209",
   email: "syedmdabuhoraira@gmail.com",
   skype: "live:.cid.2faef17d11894730",
